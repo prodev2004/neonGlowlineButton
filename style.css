@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #00000c;
+}
+
+button {
+    font-size: 1rem;
+    padding: .5rem 2rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    color: #fff;
+    overflow: hidden;
+    margin: 1rem;
+}
+button span {
+    position: relative;
+    z-index: 2;
+}
+button::before {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    animation: rotate 3000ms linear infinite;
+    animation-play-state: paused;
+}
+button:hover::before {
+    animation-play-state: running;
+}
+button:active {
+    transform: scale(.95);
+}
+@keyframes rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+button:after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 5px;
+}
+/* I will create 2 more examples */
+
+/* BUTTON 1 */
+.button1, .button1::after {
+    background-color: #00002f;
+}
+.button1::before {
+    background-image: linear-gradient(to right, #00aeff, #ff0000);
+}
+
+/* BUTTON 2 */
+.button2, .button2::after {
+    background-color: #021d00;
+}
+.button2::before {
+    background-image: linear-gradient(to right, #ffff00, #008000);
+}
+
+/* BUTTON 3 */
+.button3, .button3::after {
+    background-color: #330000;
+}
+.button3::before {
+    background-image: linear-gradient(to right, #ff0800, #ffe600);
+}
+
+/* SOURCE CODE IN THE DESCRIPTION */
